@@ -1,0 +1,33 @@
+﻿@using Session3.Models;
+@model Student
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Insert</title>
+    <link rel="stylesheet" href="~/Content/bootstrap.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Add Student</h1>
+        <hr />
+        @using (Html.BeginForm())
+        {
+            <div class="row">
+                <div class="col-lg-2">@Html.LabelFor(m => m.Name)</div>
+                <div class="col-lg-10">@Html.TextBoxFor(m => m.Name, new { @class = "form-control" })</div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2">@Html.LabelFor(m => m.DateOfJoin)</div>
+                <div class="col-lg-10">@Html.TextBoxFor(m => m.DateOfJoin, new { @class = "form-control" })</div>
+            </div>
+            <div><input type="submit" value="Insert Student"></div>
+        }
+    </div>
+</body>
+</html>

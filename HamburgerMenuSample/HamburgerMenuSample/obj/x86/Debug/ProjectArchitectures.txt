@@ -1,0 +1,1 @@
+D:\Aptech\FE\T1902E\Sem3\WFP\HamburgerMenuSample\HamburgerMenuSample\HamburgerMenuSample.csproj;x86

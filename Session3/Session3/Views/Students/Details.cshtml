@@ -1,0 +1,25 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="~/Content/bootstrap.css" />
+</head>
+<body>
+    <div class="container">
+        @{ var student = ViewBag.student;}
+        <h1>Student Information</h1>
+        <div>Id: @student.Id</div>
+        <div>Name: @student.Name</div>
+        <div>Date of join: @student.DateOfJoin</div>
+        <hr />
+        @Html.ActionLink("Back", "Index")
+    </div>
+</body>
+</html>

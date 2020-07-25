@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>HtmlHelper</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div>@Html.ActionLink("Home", "Index")</div>
+        <div>
+            @using (Html.BeginForm())
+            {
+                <div>Day la form</div>
+                <div class="row form-group">
+                    <div class="col-lg-4">@Html.Label("User Name", new { @for = "txtName" })</div>
+                    <div class="col-lg-8">@Html.TextBox("txtName", null, new { @class = "form-control" })</div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-lg-4">@Html.Label("Password", new { @for = "txtPassword" })</div>
+                    <div class="col-lg-8">@Html.TextBox("txtPassword", null, new { @class = "form-control" })</div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-lg-4">@Html.Label("Remember Me", new { @for = "cbRemember" })</div>
+                    <div class="col-lg-8">@Html.CheckBox("cbRemember")</div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-lg-4">@Html.Label("Select Type:", new { @for = "ddType" })</div>
+                    <div class="col-lg-8">@Html.DropDownList("ddType", new SelectList(new[] { "Admin", "Student", "Teacher"},), new { @class = "form-control" })</div>
+                </div>
+            }
+        </div>
+    </div>
+</body>
+</html>

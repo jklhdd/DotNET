@@ -1,0 +1,1 @@
+C:\Users\Long\source\repos\FileManager\FileManager\FileManager.csproj;x86

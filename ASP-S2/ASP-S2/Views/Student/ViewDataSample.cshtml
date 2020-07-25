@@ -1,0 +1,30 @@
+﻿@using ASP_S2.Models;
+@{
+
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ViewDataSample</title>
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Student Information</h1>
+        <hr />
+        @{
+            var student = ViewData["student1"] as Student;
+        }
+        @if (student != null)
+        {
+            <div>ID: @student.ID</div>
+            <div>Name: @student.Name</div>
+            <div>Date of join: @student.DateOfJoin</div>
+        }
+    </div>
+</body>
+</html>

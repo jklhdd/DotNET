@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ViewBagSample</title>
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Student Information</h1>
+        <hr />
+        @{
+            var student = ViewBag.student;
+        }
+        @if (student != null)
+        {
+            <div>ID: @student.ID</div>
+            <div>Name: @student.Name</div>
+            <div>Date of join: @student.DateOfJoin</div>
+        }
+    </div>
+</body>
+</html>

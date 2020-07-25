@@ -1,0 +1,17 @@
+﻿<Page
+    x:Class="App1.studentDetailPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="275,92,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Name="ID"/>
+        <TextBlock HorizontalAlignment="Left" Margin="304,143,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Name="Name"/>
+        <TextBlock HorizontalAlignment="Left" Margin="362,201,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Name="DOB"/>
+
+    </Grid>
+</Page>

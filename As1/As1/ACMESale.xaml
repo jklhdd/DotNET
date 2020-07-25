@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="As1.ACMESale"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:As1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <Thickness x:Key="TextMargin">20,20,20,20</Thickness>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="ACME Sales Corp" FontSize="48" Grid.Row="0" Grid.Column="0" Margin="{StaticResource TextMargin}"></TextBlock>
+        <TextBlock Text="First Name:" Grid.Row="1" Grid.Column="0" Margin="{StaticResource TextMargin}"></TextBlock>
+        <TextBox Name="fname" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="128,10,772,10"/>
+        <TextBlock Text="Last Name:" Grid.Row="2" Grid.Column="0" Margin="{StaticResource TextMargin}"></TextBlock>
+        <TextBox Name="lname" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="128,10,772,10"/>
+        <TextBlock Text="Email:" Grid.Row="3" Grid.Column="0" Margin="{StaticResource TextMargin}"></TextBlock>
+        <TextBox Name="email" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="128,10,772,10"/>
+        <Button Name="save" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Margin="128,10,772,10" Click="save_Click">Save</Button>
+    </Grid>
+</Page>

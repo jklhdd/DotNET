@@ -1,0 +1,29 @@
+﻿<Page
+    x:Class="helloworld.splitview"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:helloworld"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <SplitView DisplayMode="Overlay" CompactPaneLength="60" OpenPaneLength="200" Name="Mysplitpane">
+            <SplitView.Pane>
+                <ListBox>
+                    <ListBoxItem>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="lolo"></TextBlock>
+                            <TextBlock Text="Financia"></TextBlock>
+                        </StackPanel>
+                    </ListBoxItem>
+                </ListBox>
+            </SplitView.Pane>
+        </SplitView>
+        <Button Content="Split it&#xD;&#xA;" Margin="450,50,0,0" VerticalAlignment="Top" Width="154" Height="32" Click="Button_Click" Background="#FFDCBEBE" FontFamily=".VnArial"/>
+        <ToggleButton Content="ToggleButton" Margin="476,188,0,0" VerticalAlignment="Top" Checked="ToggleButton_Checked"/>
+        <Button Content="Dialog&#xD;&#xA;" HorizontalAlignment="Center" Margin="0,288,0,0" VerticalAlignment="Top" Width="133" Click="Button_Click_1"/>
+
+    </Grid>
+</Page>

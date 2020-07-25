@@ -1,0 +1,58 @@
+﻿<Page
+    x:Class="As1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:As1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="485*"/>
+            <ColumnDefinition Width="539*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.ColumnSpan="2">
+            <StackPanel Orientation="Horizontal" Height="29">
+                <Grid Width="1000">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                        <ColumnDefinition Width="1000px"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" Name="btnOpen" Click="menu_Click" Width="50"></Button>
+                    <TextBlock Grid.Column="1" Text="Financial" FontSize="20"></TextBlock>
+                    <StackPanel Grid.Column="2"  Orientation="Horizontal"/>
+                </Grid>
+                <AutoSuggestBox QueryIcon="Find" Text="Search..." Width="277"/>
+            </StackPanel>
+            <SplitView DisplayMode="CompactOverlay" OpenPaneLength="150" CompactPaneLength="50" Name="mySplitView">
+                <SplitView.Pane>
+                    <ListBox Margin="-7,0,0,0">
+                        <ListBoxItem Name="Finacial">
+                            <Button>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="&#xE10F;" FontFamily="Segoe MDL2 Assets" FontSize="20"></TextBlock>
+                                    <TextBlock Text="Financial" FontSize="16" Margin="20,0,0,0"></TextBlock>
+                                </StackPanel>
+                            </Button>
+                        </ListBoxItem>
+                        <ListBoxItem Name="FoodItem">
+                            <Button Name="btnFood" Click="btnOpen_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="&#xE1CE;" FontFamily="Segoe MDL2 Assets" FontSize="20"></TextBlock>
+                                    <TextBlock Text="Food" FontSize="16" Margin="20,0,0,0"></TextBlock>
+                                </StackPanel>
+                            </Button>
+                        </ListBoxItem>
+                    </ListBox>
+                </SplitView.Pane>
+                <Image Source="Assets/Financial.png" Margin="0,0,0,0"/>
+
+            </SplitView>
+
+        </StackPanel>
+    </Grid>
+
+</Page>

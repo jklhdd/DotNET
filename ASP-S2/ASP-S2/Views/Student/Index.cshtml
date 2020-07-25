@@ -1,0 +1,49 @@
+﻿@using ASP_S2.Models;
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+</head>
+<body>
+    @{
+        var student1 = ViewData["student1"] as Student;
+        var student2 = ViewBag.student;
+        var student3 = TempData["student1"] as Student;
+    }
+    @Html.Partial("HeaderView")
+    <div class="container">
+        <h1>Student Information</h1>
+        <hr />
+        <h2>ViewData Object</h2>
+        @if (student1 != null)
+        {
+            <div>ID: @student1.ID</div>
+            <div>Name: @student1.Name</div>
+            <div>Date of join: @student1.DateOfJoin</div>
+        }
+        <h2>ViewBag Object</h2>
+        @if (student2 != null)
+        {
+            <div>ID: @student2.ID</div>
+            <div>Name: @student2.Name</div>
+            <div>Date of join: @student2.DateOfJoin</div>
+        }
+        <h2>TempData Object</h2>
+        @if (student3 != null)
+        {
+            <div>ID: @student3.ID</div>
+            <div>Name: @student3.Name</div>
+            <div>Date of join: @student3.DateOfJoin</div>
+        }
+        @Html.ActionLink("Move to another method", "CompareObject")
+    </div>
+</body>
+</html>

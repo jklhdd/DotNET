@@ -1,0 +1,23 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    @{
+        var products = new string[] { "Laptop", "Mouse", "Monitor" };
+    }
+    <div>
+        @foreach (var item in products)
+        {
+            <div>@item</div>
+        }
+    </div>
+</body>
+</html>
