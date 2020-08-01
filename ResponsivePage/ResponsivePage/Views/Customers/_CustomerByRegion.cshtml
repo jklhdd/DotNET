@@ -1,0 +1,16 @@
+﻿@model List<ResponsivePage.Models.Customer>
+<table class="table table-responsive table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Region</th>
+    </tr>
+    @foreach (var customer in Model)
+    {
+        <tr>
+            <td>@customer.Id</td>
+            <td>@customer.Name</td>
+            <td>@customer.Region</td>
+        </tr>
+    }
+</table>

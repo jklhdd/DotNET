@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBASP", "DBASP\DBASP.csproj", "{A85ABB20-7248-488D-A8B7-8E41082C64E2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A85ABB20-7248-488D-A8B7-8E41082C64E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A85ABB20-7248-488D-A8B7-8E41082C64E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A85ABB20-7248-488D-A8B7-8E41082C64E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A85ABB20-7248-488D-A8B7-8E41082C64E2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0A675DAB-2E94-43A0-AD57-F0D7F57B17A0}
+	EndGlobalSection
+EndGlobal
