@@ -11,9 +11,9 @@ namespace CookieASP.Controllers
         // GET: ApplicationSample
         public ActionResult Index()
         {
-            if (HttpContext.Application)
+            if (HttpContext.Application["numbervisited"] != null)
             {
-
+                ViewBag.msg = "Number visit:" + HttpContext.Application["numbervisited"];
             }
             return View();
         }
