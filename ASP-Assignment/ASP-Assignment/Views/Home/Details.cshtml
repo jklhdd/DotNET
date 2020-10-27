@@ -1,0 +1,46 @@
+﻿@model ASP_Assignment.Models.Book
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="row tm-item-preview">
+    <div class="col-md-6 col-sm-12 mb-md-0 mb-5">
+        <img src="@Model.ImgUrl" alt="Image" class="img-fluid tm-img-center-sm" width="480px" height="720px">
+    </div>
+    <div class="col-md-6 col-sm-12">
+        <h2 class="tm-blue-text tm-margin-b-p">@Model.Title</h2>
+        <p class="tm-margin-b-p">@Model.Summary</p>
+        <p class="tm-blue-text tm-margin-b-s">Categories: <a href="#" class="tm-blue-text">@Model.Category.CateName</a></p>
+        <p class="tm-blue-text tm-margin-b-s">Comment: @Model.Comments.Count</p>
+        <p class="tm-blue-text tm-margin-b">Rating: </p>
+        <a href="#" class="tm-btn tm-btn-gray tm-margin-r-20 tm-margin-b-s">Preview</a><a href="#" class="tm-btn tm-btn-blue">Buy Now</a>
+    </div>
+</section>
+
+<section>
+    <h4 class="py-lg-4" style="text-align:center">Comments</h4>
+
+    @foreach (var comment in Model.Comments)
+    {
+        <div class="col-12 comment-block py-1">
+            <p>@comment.CreateDate</p>
+            <p>@comment.Content</p>
+        </div>
+    }
+
+    @using (Html.BeginForm("Comment", "Home", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-group">
+            <textarea class="form-control" placeholder="Write your comment here" style="height:100px" name="content" required></textarea>
+        </div>
+        <div class="form-group">
+            <input name="bookId" value="@Model.Id" hidden />
+        </div>
+        <div class="form-group">
+            <input type="submit" class="btn btn-success"></input>
+        </div>
+    }
+</section>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamEAP", "ExamEAP\ExamEAP.csproj", "{84170DD6-BC3F-4FFE-8D48-C8E1C096CEEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientExam", "ClientExam\ClientExam.csproj", "{203D5CFE-9FDE-4537-8A08-71D6BB60033B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{84170DD6-BC3F-4FFE-8D48-C8E1C096CEEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84170DD6-BC3F-4FFE-8D48-C8E1C096CEEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84170DD6-BC3F-4FFE-8D48-C8E1C096CEEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84170DD6-BC3F-4FFE-8D48-C8E1C096CEEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{203D5CFE-9FDE-4537-8A08-71D6BB60033B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{203D5CFE-9FDE-4537-8A08-71D6BB60033B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{203D5CFE-9FDE-4537-8A08-71D6BB60033B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{203D5CFE-9FDE-4537-8A08-71D6BB60033B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B823B3E3-F4E0-48D2-93CA-7C39CE2E607F}
+	EndGlobalSection
+EndGlobal

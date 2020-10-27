@@ -1,0 +1,49 @@
+﻿@model PagedList.IPagedList<ASP_Assignment.Models.Book>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="tm-margin-b-l">
+    <header>
+        <h2 class="tm-main-title">Welcome to our bookstore</h2>
+    </header>
+
+    <p>List book</p>
+
+    <div class="tm-gallery">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <figure class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+                    <a href="@Url.Action("Details", "Home", new { id = item.Id })">
+                        <div class="tm-gallery-item-overlay">
+                            <img src="@item.ImgUrl" alt="Image" width="240px" height="360px">
+                        </div>
+                        <p class="tm-figcaption">@item.Title</p>
+                    </a>
+                </figure>
+            }
+        </div>
+    </div>
+
+    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+</section>
+@section footer{
+    <section class="media tm-highlight tm-highlight-w-icon">
+        <div class="tm-highlight-icon">
+            <i class="fa tm-fa-6x fa-meetup"></i>
+        </div>
+
+        <div class="media-body">
+            <header>
+                <h2>Need Help?</h2>
+            </header>
+            <p class="tm-margin-b">Đội tư vấn 24/7</p>
+            <a href="" class="tm-white-bordered-btn">Live Chat</a>
+        </div>
+    </section>
+}
